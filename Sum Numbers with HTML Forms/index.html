@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Numbers with HTML Forms</title>
+</head>
+<body>
+    <h3>SUM NUMBERS:</h3>
+    <button onclick="addNumberInput()">Add Number</button>
+    <form id="sum-numbers">
+        <input type="button" onclick="sumNumbers()" value="Sum Numbers">
+    </form>
+    <script src="sum-numbers.js"></script>
+    <script>
+        "use strict";
+        function addNumberInput() {
+            let newLineElement = document.createElement('br');
+            let input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'number';
+            let sumNumbersForm = document.getElementById('sum-numbers');
+            sumNumbersForm.insertBefore(newLineElement, sumNumbersForm.firstChild);
+            sumNumbersForm.insertBefore(input, sumNumbersForm.firstChild);
+        }
+    </script>
+</body>
+</html>
